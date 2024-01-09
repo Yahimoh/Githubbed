@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GBDError: String {
+enum GBDError: String, Error {
     case invalidUsername = "Inputted username created a wrong request. Please try again."
     case unableToComplete = "Unable to complete your request. Please try again."
     case invalidResponse = "Invalid response from the server. Please try again."

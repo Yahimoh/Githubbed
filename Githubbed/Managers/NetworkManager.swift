@@ -14,27 +14,27 @@ class NetworkManager {
     
     private init() {}
     
-    func getFollowers(for username: String, page: Int, completion: @escaping([FollowerModel]?, String?) -> Void) {
+    func getFollowers(for username: String, page: Int, completion: @escaping(Result<[FollowerModel], GBDError>) -> Void) {
         let urlEndpoint = baseUrl + "/users/\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: urlEndpoint) else {
-            completion(nil, "Invalid URL , Please try again")
+            completion(.failure(.invalidUsername))
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                completion(nil, "Unable to complete your request, Please try your internet connection.")
+                completion(.failure(.unableToComplete))
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completion(nil, "Invalid responese from the server, Please try again.")
+                completion(.failure(.unableToComplete))
                 return
             }
             
             guard let data = data else {
-                completion(nil, "The error received from data is invalid, Please try again.")
+                completion(.failure(.invalidData))
                 return
             }
             
@@ -42,9 +42,9 @@ class NetworkManager {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let followers = try decoder.decode([FollowerModel].self, from: data)
-                completion(followers, nil)
+                completion(.success(followers))
             } catch {
-                completion(nil, "The error received from data is invalid, Please try again.")
+                completion(.failure(.invalidData))
             }
             
         }
