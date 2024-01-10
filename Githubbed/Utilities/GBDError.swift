@@ -12,4 +12,5 @@ enum GBDError: String, Error {
     case unableToComplete = "Unable to complete your request. Please try again."
     case invalidResponse = "Invalid response from the server. Please try again."
     case invalidData = "The data received from the server was invalid. Please try again."
+    case userHasNoFollowers = "This user doesn't have any followers. Go follow them 💕"
 }
