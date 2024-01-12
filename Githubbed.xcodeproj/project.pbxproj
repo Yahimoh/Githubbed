@@ -10,6 +10,12 @@
 		0008B3F72B4FFA320099D13F /* GBDUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B3F62B4FFA320099D13F /* GBDUserInfoHeaderVC.swift */; };
 		0008B3FB2B4FFBA20099D13F /* GBDSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B3FA2B4FFBA20099D13F /* GBDSecondaryTitleLabel.swift */; };
 		0008B3FD2B500EBD0099D13F /* SFSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B3FC2B500EBD0099D13F /* SFSymbols.swift */; };
+		0008B3FF2B50BBDB0099D13F /* GBDItemInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B3FE2B50BBDB0099D13F /* GBDItemInfoView.swift */; };
+		0008B4012B50C6220099D13F /* GBDItemInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B4002B50C6220099D13F /* GBDItemInfoVC.swift */; };
+		0008B4052B50D1980099D13F /* GBDRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B4042B50D1980099D13F /* GBDRepoItemVC.swift */; };
+		0008B4072B5151130099D13F /* GBDFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B4062B5151130099D13F /* GBDFollowerItemVC.swift */; };
+		0008B40A2B5157F00099D13F /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B4092B5157F00099D13F /* Date+Ext.swift */; };
+		0008B40C2B5158220099D13F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008B40B2B5158220099D13F /* String+Ext.swift */; };
 		000EEF282B4FEACE00AA4522 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000EEF272B4FEACE00AA4522 /* UserInfoVC.swift */; };
 		002816AD2B4DF7BD00ED135F /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002816AC2B4DF7BD00ED135F /* UIHelper.swift */; };
 		005CC2CE2B4C55240080D40F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CC2CD2B4C55240080D40F /* UserModel.swift */; };
@@ -38,6 +44,12 @@
 		0008B3F62B4FFA320099D13F /* GBDUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDUserInfoHeaderVC.swift; sourceTree = "<group>"; };
 		0008B3FA2B4FFBA20099D13F /* GBDSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		0008B3FC2B500EBD0099D13F /* SFSymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbols.swift; sourceTree = "<group>"; };
+		0008B3FE2B50BBDB0099D13F /* GBDItemInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDItemInfoView.swift; sourceTree = "<group>"; };
+		0008B4002B50C6220099D13F /* GBDItemInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDItemInfoVC.swift; sourceTree = "<group>"; };
+		0008B4042B50D1980099D13F /* GBDRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDRepoItemVC.swift; sourceTree = "<group>"; };
+		0008B4062B5151130099D13F /* GBDFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBDFollowerItemVC.swift; sourceTree = "<group>"; };
+		0008B4092B5157F00099D13F /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		0008B40B2B5158220099D13F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		000EEF272B4FEACE00AA4522 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		002816AC2B4DF7BD00ED135F /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		005CC2CD2B4C55240080D40F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -91,6 +103,16 @@
 				00734B882B49915E00A51CE5 /* GBDButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		0008B4082B5151780099D13F /* UserInfoVCs */ = {
+			isa = PBXGroup;
+			children = (
+				0008B4002B50C6220099D13F /* GBDItemInfoVC.swift */,
+				0008B4042B50D1980099D13F /* GBDRepoItemVC.swift */,
+				0008B4062B5151130099D13F /* GBDFollowerItemVC.swift */,
+			);
+			path = UserInfoVCs;
 			sourceTree = "<group>";
 		};
 		00734B622B49801500A51CE5 = {
@@ -159,7 +181,6 @@
 				009857062B4B05AB00042007 /* FollowerListVC.swift */,
 				00734B842B4988BD00A51CE5 /* FavouritesListVC.swift */,
 				00734B822B49888F00A51CE5 /* SearchVC.swift */,
-				0073CDA32B4EA30C0042B519 /* GBDEmptyStateView.swift */,
 				000EEF272B4FEACE00AA4522 /* UserInfoVC.swift */,
 			);
 			path = Screens;
@@ -171,10 +192,13 @@
 				0008B3F92B4FFAF50099D13F /* Buttons */,
 				0008B3F82B4FFA740099D13F /* Labels */,
 				0090C8F22B4DBAF9001786A3 /* Cells */,
+				0008B4082B5151780099D13F /* UserInfoVCs */,
 				00734B8A2B4994CA00A51CE5 /* GBDTextField.swift */,
 				0098570C2B4B0F0300042007 /* GBDAlertVC.swift */,
 				0090C8F52B4DBBE2001786A3 /* GBDAvatarImageView.swift */,
 				0008B3F62B4FFA320099D13F /* GBDUserInfoHeaderVC.swift */,
+				0073CDA32B4EA30C0042B519 /* GBDEmptyStateView.swift */,
+				0008B3FE2B50BBDB0099D13F /* GBDItemInfoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -183,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				0098570E2B4C468700042007 /* UIViewController+Ext.swift */,
+				0008B4092B5157F00099D13F /* Date+Ext.swift */,
+				0008B40B2B5158220099D13F /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,22 +295,28 @@
 				0008B3FD2B500EBD0099D13F /* SFSymbols.swift in Sources */,
 				0098570D2B4B0F0300042007 /* GBDAlertVC.swift in Sources */,
 				00734B832B49888F00A51CE5 /* SearchVC.swift in Sources */,
+				0008B40C2B5158220099D13F /* String+Ext.swift in Sources */,
 				00734B892B49915E00A51CE5 /* GBDButton.swift in Sources */,
 				0098570F2B4C468700042007 /* UIViewController+Ext.swift in Sources */,
 				00734B6F2B49801500A51CE5 /* AppDelegate.swift in Sources */,
+				0008B4072B5151130099D13F /* GBDFollowerItemVC.swift in Sources */,
 				002816AD2B4DF7BD00ED135F /* UIHelper.swift in Sources */,
 				005CC2CE2B4C55240080D40F /* UserModel.swift in Sources */,
 				009857152B4C52B200042007 /* FollowerModel.swift in Sources */,
 				0090C8F42B4DBB25001786A3 /* FollowerCell.swift in Sources */,
+				0008B4012B50C6220099D13F /* GBDItemInfoVC.swift in Sources */,
+				0008B4052B50D1980099D13F /* GBDRepoItemVC.swift in Sources */,
 				0090C8F12B4DB231001786A3 /* GBDError.swift in Sources */,
 				0008B3FB2B4FFBA20099D13F /* GBDSecondaryTitleLabel.swift in Sources */,
 				00734B852B4988BD00A51CE5 /* FavouritesListVC.swift in Sources */,
 				00734B712B49801500A51CE5 /* SceneDelegate.swift in Sources */,
 				009857092B4B0C5A00042007 /* GBDTitleLabel.swift in Sources */,
 				007D3A8F2B4C61EE008E5FB6 /* NetworkManager.swift in Sources */,
+				0008B40A2B5157F00099D13F /* Date+Ext.swift in Sources */,
 				00734B8B2B4994CA00A51CE5 /* GBDTextField.swift in Sources */,
 				009857072B4B05AB00042007 /* FollowerListVC.swift in Sources */,
 				0008B3F72B4FFA320099D13F /* GBDUserInfoHeaderVC.swift in Sources */,
+				0008B3FF2B50BBDB0099D13F /* GBDItemInfoView.swift in Sources */,
 				0090C8F62B4DBBE2001786A3 /* GBDAvatarImageView.swift in Sources */,
 				0073CDA42B4EA30C0042B519 /* GBDEmptyStateView.swift in Sources */,
 				0098570B2B4B0E1C00042007 /* GBDBodyLabel.swift in Sources */,

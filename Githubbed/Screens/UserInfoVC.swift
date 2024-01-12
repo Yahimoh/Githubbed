@@ -7,11 +7,17 @@
 
 import UIKit
 
+protocol UserInfoVCDelegate: class {
+    func didTapGithubProfile()
+    func didTapGetFollowers()
+}
+
 class UserInfoVC: UIViewController {
     
     let headerView = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
+    let dateLabel = GBDBodyLabel(textAlignment: .center)
     var itemViews: [UIView] = []
     
     var username: String!
@@ -37,6 +43,11 @@ class UserInfoVC: UIViewController {
             case .success(let user):
                 DispatchQueue.main.async {
                     self.addChildVC(childVC: GBDUserInfoHeaderVC(user: user), to: self.headerView)
+                    let repoItemVC = GBDRepoItemVC(user: user)
+                    repoItemVC.delegate = self
+                    self.addChildVC(childVC: GBDRepoItemVC(user: user), to: self.itemViewOne)
+                    self.addChildVC(childVC: GBDFollowerItemVC(user: user), to: self.itemViewTwo)
+                    self.dateLabel.text = "GitHub since \(user.createdAt.convertToDisplayFormat())"
                 }
             case.failure(let error):
                 self.presentGFAlertOnMainThread(title: "Error fetching user", message: "Can't fetch clicked user", buttonTitle: "Ok")
@@ -45,7 +56,7 @@ class UserInfoVC: UIViewController {
     }
     
     func layoutUI() {
-        itemViews = [headerView, itemViewOne, itemViewTwo]
+        itemViews = [headerView, itemViewOne, itemViewTwo, dateLabel]
         
         let padding: CGFloat = 20
         let itemHeight: CGFloat = 140
@@ -58,9 +69,8 @@ class UserInfoVC: UIViewController {
                 viewItem.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding)
             ])
         }
-
-        itemViewOne.backgroundColor = .systemPink
-        itemViewTwo.backgroundColor = .systemBlue
+        
+        
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -68,7 +78,9 @@ class UserInfoVC: UIViewController {
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
             itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
-            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
+            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
+            dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
+            dateLabel.heightAnchor.constraint(equalToConstant: 18)
         ])
     }
     
@@ -81,5 +93,16 @@ class UserInfoVC: UIViewController {
     
     @objc func dismissVC() {
         dismiss(animated: true)
+    }
+}
+
+extension UserInfoVC: UserInfoVCDelegate {
+    func didTapGithubProfile() {
+        // show safari view controller
+    }
+    
+    func didTapGetFollowers() {
+        // dismissvc
+        // tell follower list screen the new user 
     }
 }
