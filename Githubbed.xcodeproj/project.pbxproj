@@ -105,14 +105,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
-		0008B4082B5151780099D13F /* UserInfoVCs */ = {
+		0008B4082B5151780099D13F /* ItemInfoVCs */ = {
 			isa = PBXGroup;
 			children = (
 				0008B4002B50C6220099D13F /* GBDItemInfoVC.swift */,
 				0008B4042B50D1980099D13F /* GBDRepoItemVC.swift */,
 				0008B4062B5151130099D13F /* GBDFollowerItemVC.swift */,
 			);
-			path = UserInfoVCs;
+			path = ItemInfoVCs;
 			sourceTree = "<group>";
 		};
 		00734B622B49801500A51CE5 = {
@@ -192,7 +192,7 @@
 				0008B3F92B4FFAF50099D13F /* Buttons */,
 				0008B3F82B4FFA740099D13F /* Labels */,
 				0090C8F22B4DBAF9001786A3 /* Cells */,
-				0008B4082B5151780099D13F /* UserInfoVCs */,
+				0008B4082B5151780099D13F /* ItemInfoVCs */,
 				00734B8A2B4994CA00A51CE5 /* GBDTextField.swift */,
 				0098570C2B4B0F0300042007 /* GBDAlertVC.swift */,
 				0090C8F52B4DBBE2001786A3 /* GBDAvatarImageView.swift */,
