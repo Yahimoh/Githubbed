@@ -19,6 +19,7 @@
 		000EEF282B4FEACE00AA4522 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000EEF272B4FEACE00AA4522 /* UserInfoVC.swift */; };
 		002816AD2B4DF7BD00ED135F /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002816AC2B4DF7BD00ED135F /* UIHelper.swift */; };
 		005CC2CE2B4C55240080D40F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CC2CD2B4C55240080D40F /* UserModel.swift */; };
+		006794002B520BE600C613F0 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006793FF2B520BE600C613F0 /* PersistanceManager.swift */; };
 		00734B6F2B49801500A51CE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00734B6E2B49801500A51CE5 /* AppDelegate.swift */; };
 		00734B712B49801500A51CE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00734B702B49801500A51CE5 /* SceneDelegate.swift */; };
 		00734B782B49801800A51CE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00734B772B49801800A51CE5 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		000EEF272B4FEACE00AA4522 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		002816AC2B4DF7BD00ED135F /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		005CC2CD2B4C55240080D40F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		006793FF2B520BE600C613F0 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
 		00734B6B2B49801500A51CE5 /* Githubbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Githubbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00734B6E2B49801500A51CE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00734B702B49801500A51CE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				007D3A8E2B4C61EE008E5FB6 /* NetworkManager.swift */,
+				006793FF2B520BE600C613F0 /* PersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				0008B4012B50C6220099D13F /* GBDItemInfoVC.swift in Sources */,
 				0008B4052B50D1980099D13F /* GBDRepoItemVC.swift in Sources */,
 				0090C8F12B4DB231001786A3 /* GBDError.swift in Sources */,
+				006794002B520BE600C613F0 /* PersistanceManager.swift in Sources */,
 				0008B3FB2B4FFBA20099D13F /* GBDSecondaryTitleLabel.swift in Sources */,
 				00734B852B4988BD00A51CE5 /* FavouritesListVC.swift in Sources */,
 				00734B712B49801500A51CE5 /* SceneDelegate.swift in Sources */,
