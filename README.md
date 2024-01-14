@@ -1,6 +1,6 @@
 # GitHubbed, An UIKit app for showcasing and favoriting GitHub users and their followers
 
-### This UIKit based app allows for the user to search for and display any github user's followers and their following and to 
+### This UIKit based app allows for the user to search for and display any github user's followers and their following among other info about the selected user
 
 ## Features
 * Search and fetch Github users followers by their username
