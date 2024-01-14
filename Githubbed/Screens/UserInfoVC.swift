@@ -46,7 +46,7 @@ class UserInfoVC: UIViewController {
                     self.configureUIElements(with: user)
                 }
             case.failure(let error):
-                self.presentGFAlertOnMainThread(title: "Error fetching user", message: "Can't fetch clicked user", buttonTitle: "Ok")
+                self.presentGBDAlertOnMainThread(title: "Error fetching user", message: "Can't fetch clicked user", buttonTitle: "Ok")
             }
         }
     }
@@ -108,7 +108,7 @@ class UserInfoVC: UIViewController {
 extension UserInfoVC: UserInfoVCDelegate {
     func didTapGithubProfile(for user: UserModel) {
         guard let url = URL(string: user.htmlUrl) else {
-            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this github user is invalid", buttonTitle: "Ok")
+            presentGBDAlertOnMainThread(title: "Invalid URL", message: "The url attached to this github user is invalid", buttonTitle: "Ok")
             return
         }
         presentSafariVC(with: url)
@@ -116,7 +116,7 @@ extension UserInfoVC: UserInfoVCDelegate {
     
     func didTapGetFollowers(for user: UserModel) {
         guard user.followers != 0 else {
-            presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers 😭", buttonTitle: "")
+            presentGBDAlertOnMainThread(title: "No followers", message: "This user has no followers 😭", buttonTitle: "")
             return
         }
         delegate.didRequestFollowers(for: user.login)
