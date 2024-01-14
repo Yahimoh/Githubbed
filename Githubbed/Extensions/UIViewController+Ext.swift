@@ -11,7 +11,7 @@ import SafariServices
 fileprivate var containerView: UIView!
 
 extension UIViewController {
-    func presentGFAlertOnMainThread(title: String, message: String, buttonTitle: String) {
+    func presentGBDAlertOnMainThread(title: String, message: String, buttonTitle: String) {
         DispatchQueue.main.async {
             let alertVC = GBDAlertVC(alertTitle: title, message: message, buttonTitle: buttonTitle)
             alertVC.modalPresentationStyle = .overFullScreen

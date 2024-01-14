@@ -73,7 +73,7 @@ class FollowerListVC: UIViewController {
             
             switch result {
             case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Error bruh", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGBDAlertOnMainThread(title: "Error bruh", message: error.rawValue, buttonTitle: "Ok")
                 return
             case .success(let followerData):
                 if followerData.count < 100 { self.hasMoreFollowers = false }
@@ -117,14 +117,14 @@ class FollowerListVC: UIViewController {
                     guard let self = self else {return}
                     
                     guard let error = error else {
-                        self.presentGFAlertOnMainThread(title: "Success", message: "You have favourited \(favourite.login) succesfully", buttonTitle: "Yay!")
+                        self.presentGBDAlertOnMainThread(title: "Success", message: "You have favourited \(favourite.login) succesfully", buttonTitle: "Yay!")
                         return
                     }
-                    self.presentGFAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
+                    self.presentGBDAlertOnMainThread(title: "Error", message: error.rawValue, buttonTitle: "Ok")
                 }
                 
             case .failure(let error):
-                self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
+                self.presentGBDAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
             }
             
         }
