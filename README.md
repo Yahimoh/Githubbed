@@ -28,3 +28,5 @@
 3. Build & run and enjoy!
 
 > This project was heavily inspired by [Sean Allen's](https://github.com/SAllen0400) take home project [course](https://www.youtube.com/watch?v=JzngncpZLuw&t=24467s) from which i learned a great ton!
+
+## More
